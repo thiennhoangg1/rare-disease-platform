@@ -12,6 +12,7 @@ export function PageWithSidebar({ children }: PageWithSidebarProps) {
       </div>
       
       <aside className="space-y-6">
+      <h2 className="text-lg font-bold">Resources</h2> 
         <ResourceList />
       </aside>
     </div>

@@ -12,24 +12,21 @@ function DNAModel() {
   return (
     <primitive 
       object={scene} 
-      scale={1.5} 
-      position={[0, -7, -10]} 
-      rotation={[0, 0.5, 0]} 
+      scale={2} 
+      position={[0, 0, 0]} 
+      rotation={[0, Math.PI / 6, 0]} 
     />
   )
 }
 
-export function RotatingDNA() {
+export default function TestDNA() {
   useEffect(() => {
-    console.log("RotatingDNA mounted")
+    console.log("TestDNA page mounted")
   }, [])
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full -z-10">
-      <Canvas 
-        className="w-full h-full" 
-        camera={{ position: [0, 0, 15], fov: 60 }} 
-      >
+    <div className="h-screen w-screen bg-blue-50">
+      <Canvas className="w-full h-full" camera={{ position: [0, 0, 10] }}>
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />
         <DNAModel />
