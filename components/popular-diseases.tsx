@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-// Mock data - in a real app, this would come from an API
+// Mock data 
 const DISEASE_CATEGORIES = {
   Neurological: [
     "Angelman Syndrome",
@@ -24,7 +24,7 @@ export function PopularDiseases() {
   const [selectedCategory, setSelectedCategory] = useState<keyof typeof DISEASE_CATEGORIES>("Neurological")
   const [selectedDisease, setSelectedDisease] = useState<string | null>(null)
 
-  // Mock disease information - in a real app, this would come from an API
+  // Mock disease information 
   const getDiseaseInfo = (disease: string) => {
     return {
       name: disease,

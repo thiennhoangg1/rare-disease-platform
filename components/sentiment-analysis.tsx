@@ -24,10 +24,8 @@ export function SentimentAnalysis() {
 
     setLoading(true)
 
-    // Simulate API call for NLP analysis
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
-    // Mock results - in a real app, this would come from an API with actual NLP analysis
     setResults({
       possibleConditions: [
         {
