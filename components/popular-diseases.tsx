@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-// Mock data 
+// Mock data
 const DISEASE_CATEGORIES = {
   Neurological: [
     "Angelman Syndrome",
@@ -21,10 +21,9 @@ const DISEASE_CATEGORIES = {
 }
 
 export function PopularDiseases() {
-  const [selectedCategory, setSelectedCategory] = useState<keyof typeof DISEASE_CATEGORIES>("Neurological")
   const [selectedDisease, setSelectedDisease] = useState<string | null>(null)
-
-  // Mock information 
+  
+  // Mock information  
   const getDiseaseInfo = (disease: string) => {
     return {
       name: disease,
@@ -33,13 +32,10 @@ export function PopularDiseases() {
       resources: ["Resource 1", "Resource 2"],
     }
   }
-
+  
   return (
     <div className="space-y-4">
-      <Tabs
-        defaultValue="Neurological"
-        onValueChange={(value) => setSelectedCategory(value as keyof typeof DISEASE_CATEGORIES)}
-      >
+      <Tabs defaultValue="Neurological">
         <TabsList className="grid grid-cols-2 md:grid-cols-4 mb-4">
           {Object.keys(DISEASE_CATEGORIES).map((category) => (
             <TabsTrigger key={category} value={category}>
@@ -47,7 +43,7 @@ export function PopularDiseases() {
             </TabsTrigger>
           ))}
         </TabsList>
-
+        
         {Object.entries(DISEASE_CATEGORIES).map(([category, diseases]) => (
           <TabsContent key={category} value={category} className="mt-0">
             <div className="flex flex-wrap gap-2">
@@ -65,7 +61,7 @@ export function PopularDiseases() {
           </TabsContent>
         ))}
       </Tabs>
-
+      
       {selectedDisease && (
         <Card className="mt-6">
           <CardHeader>
@@ -104,4 +100,3 @@ export function PopularDiseases() {
     </div>
   )
 }
-

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Activity, Search } from "lucide-react"
-import { Input } from "@/components/ui/input"
+import { Activity } from "lucide-react"
 
 import "./globals.css"
 

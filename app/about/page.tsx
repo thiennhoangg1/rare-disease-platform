@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 export default function AboutPage() {
   const teamMembers = [
@@ -40,10 +41,13 @@ export default function AboutPage() {
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gray-200 relative">
-                <img
+                {/* Replaced img with Image component */}
+                <Image
                   src={member.imagePath}
                   alt={member.name || `Team member ${index + 1}`}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 200px"
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="p-4 text-center">

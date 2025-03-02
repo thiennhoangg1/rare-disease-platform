@@ -167,8 +167,7 @@ const ChiefComplaintAI: React.FC<ChiefComplaintAIProps> = ({ survey }) => {
 
   const evaluateConditions = () => {
     const allSymptoms = Object.values(DISEASE_DATA).flatMap(data => data.symptoms);
-    const uniqueSymptoms = [...new Set(allSymptoms)];
-
+    
     const scores = Object.entries(DISEASE_DATA).map(([name, data]) => {
       const matchedSymptoms = collectedSymptoms.filter(symptom =>
         data.symptoms.some(s => symptom.includes(s))
