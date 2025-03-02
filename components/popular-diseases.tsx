@@ -24,7 +24,7 @@ export function PopularDiseases() {
   const [selectedCategory, setSelectedCategory] = useState<keyof typeof DISEASE_CATEGORIES>("Neurological")
   const [selectedDisease, setSelectedDisease] = useState<string | null>(null)
 
-  // Mock disease information 
+  // Mock information 
   const getDiseaseInfo = (disease: string) => {
     return {
       name: disease,

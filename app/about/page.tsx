@@ -31,7 +31,7 @@ export default function AboutPage() {
       <header className="pt-16 pb-10 px-4 text-center">
         <h1 className="text-5xl font-bold text-gray-800 mb-4">TEAM STRAWBERRY</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Competing in Harvard Rare Diseases Hackathon 2025 on Symptom Management!
+          Competing in Harvard Rare Diseases Hackathon 2025!
         </p>
       </header>
 
